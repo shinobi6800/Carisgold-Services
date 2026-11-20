@@ -1,0 +1,62 @@
+:root {
+  --radius: 0.75rem;
+
+  --background: #fffaf8;
+  --foreground: #241b1e;
+
+  --card: #ffffff;
+  --card-foreground: #241b1e;
+  --popover: #ffffff;
+  --popover-foreground: #241b1e;
+
+  /* Logo raspberry */
+  --primary: #b3234f;
+  --primary-foreground: #ffffff;
+
+  --secondary: #fdeff1;
+  --secondary-foreground: #b3234f;
+
+  --muted: #faf1f2;
+  --muted-foreground: #756568;
+
+  --accent: #fde6d2;
+  --accent-foreground: #b3234f;
+
+  --destructive: #d92d20;
+
+  --border: #f0e0e3;
+  --input: #f0e0e3;
+  --ring: #ff9a3d;
+
+  /* Logo swirl colours */
+  --brand-purple: #c8336b;
+  --brand-magenta: #c8336b;
+  --brand-orange: #ff9a3d;
+}
+
+body {
+  font-family: var(--font-body), system-ui, sans-serif;
+}
+
+h1,
+h2,
+h3,
+.font-display {
+  font-family: var(--font-display), Georgia, serif;
+}
+
+.bg-brand-gradient {
+  background-image: linear-gradient(90deg, var(--brand-magenta), var(--brand-orange));
+}
+
+.text-brand-gradient {
+  background-image: linear-gradient(90deg, var(--brand-magenta), var(--brand-orange));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+html,
+body {
+  overflow-x: clip;
+}
