@@ -1,9 +1,14 @@
 import { createServerClient } from "@supabase/ssr";
 import { cookies } from "next/headers";
+import { connection } from "next/server";
 import type { Database } from "./database.types";
 
 export async function createClient() {
   const cookieStore = await cookies();
+
+  // Supabase reads the clock internally. With Cache Components that is only
+  // allowed once the request is fully dynamic, so opt in here.
+  await connection();
 
   return createServerClient<Database>(
     process.env.NEXT_PUBLIC_SUPABASE_URL!,
